@@ -1,0 +1,51 @@
+body{
+  font-family: Montserrat, Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+   }
+
+
+a{
+  text-decoration: none;
+  color: #EFF3F5;
+}
+
+.wrapper{
+  display: flex;
+  min-height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: #6E105E;
+}
+
+.header{
+
+}
+
+.container{
+  width: 1298px;
+  margin: 0px auto;
+}
+
+.header_row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 98%;
+}
+
+.menu_body{
+
+}
+
+.menu_list{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.menu_link{
+  margin: auto .5%;
+}
