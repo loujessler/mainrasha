@@ -1,18 +1,33 @@
-body{
-  font-family: Montserrat, Arial, "Helvetica Neue", Helvetica, sans-serif;
+@charset "UTF-8";
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Light.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+  font-style: normal;
+  letter-spacing: 0em;
+  color: #EFF3F5;
+}
+
+body {
+  background-color: #6E105E;
 }
 
 li {
-    list-style-type: none; /* Убираем маркеры */
-   }
+  list-style-type: none;
+  /* Убираем маркеры */
+}
 
-
-a{
+a {
   text-decoration: none;
   color: #EFF3F5;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   min-height: 100%;
   overflow: hidden;
@@ -20,32 +35,81 @@ a{
   background-color: #6E105E;
 }
 
-.header{
-
-}
-
-.container{
-  width: 1298px;
+.container {
+  width: 90%;
   margin: 0px auto;
 }
 
-.header_row{
+.header_row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 98%;
+  align-items: center;
+  font-weight: 600;
+  width: 100%;
+  font-size: 18px;
+  line-height: 24px;
 }
 
-.menu_body{
-
-}
-
-.menu_list{
+.menu_list {
   display: flex;
   flex-direction: row;
-
 }
 
-.menu_link{
-  margin: auto .5%;
+.menu_list li {
+  white-space: nowrap;
+  margin: auto;
+  margin-right: 5%;
+}
+
+.main {
+  width: 90%;
+  margin: 0px auto;
+  height: 100%;
+}
+
+.name_of_section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: #EFF3F5;
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 61px;
+}
+
+.blogers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 50px;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.context {
+  margin: 60% 4% 6% 4%;
+}
+
+.context span {
+  color: #EFF3F5;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 37px;
+}
+
+#card_1 {
+  background: linear-gradient(rgba(189, 28, 159, 0.25), rgba(189, 28, 159, 0.25)), url("../media/Rectangle 25.png") center/cover;
+}
+
+#card_1:hover {
+  position: inherit;
+  background: url("../media/Rectangle 25.png") center/cover;
 }
