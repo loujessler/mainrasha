@@ -4,9 +4,7 @@
 
 
 @font-face {
-  // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом)
   font-family: "Montserrat";
-  // адрес шрифта и тип
   src: url("../fonts/Montserrat-Light.ttf") format("truetype");
 
 }
@@ -21,8 +19,7 @@
 }
 
 body{
-  // font-family: Montserrat, Arial, "Helvetica Neue", Helvetica, sans-serif;
-  background-color: $bgColor;
+  background: linear-gradient(black -1%, 2%, $bgColor, $bgColor, 98%, black 108%);
 }
 
 li {
@@ -42,11 +39,14 @@ a{
 }
 
 .wrapper{
-  display: flex;
-  min-height: 100%;
-  overflow: hidden;
-  flex-direction: column;
-  background-color: $bgColor;
+  display: grid;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+  grid-template-rows: 1.5fr 9fr 2fr;
+  grid-template-columns: 100%;
+  margin: 0;
 }
 
 .header{
@@ -66,6 +66,7 @@ a{
   width: 100%;
   font-size: 18px;
   line-height: 24px;
+  margin-bottom: 30px;
 }
 
 .menu_body{
@@ -86,14 +87,101 @@ a{
 .menu_link{
 }
 
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0px;
+}
+
+.breadcrumb-item{
+  >a, .active {
+    color: $color;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    height: 17px;
+    line-height: 17px;
+    padding: 0 10px 0 5px;
+    text-align: center;
+    margin-right: 5px;
+    user-select: none;
+  }
+
+}
+
+
+.breadcrumb-item:last-child>a,
+.breadcrumb-item.active {
+  border-radius: 10px;
+  margin: 2px 5px;
+  padding: 2px 10px;
+}
+
+.breadcrumb-item:first-child>a::before,
+.breadcrumb-item:last-child>a::after {
+  border: none;
+}
+
+
+.breadcrumb-item>a::after{
+  content: "/";
+  position: absolute;
+  left: 100%;
+  color: $color;
+}
+
+.breadcrumb-item>a:hover {
+  background-color: #f3e5f5;
+  color: $bgColor;
+  border-radius: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding-top: 2px;
+  padding-bottom:  2px;
+
+  &:after{
+    content: "/";
+    position: absolute;
+    left: 100%;
+    color: $color;
+  }
+}
+
+.breadcrumb-item.active {
+  color: #6a1b9a;
+  background-color: #f3e5f5;
+}
+
 
 // ___________main_____________
 
 .main{
+  display: grid;
+  grid-template-areas:
+  "name_of_section"
+  "sort_menu"
+  "blogers"
+  "loading_line";
+
+  grid-template-rows: 2fr 1fr 15fr 1.5fr;
+  grid-template-columns: 1fr;
+  grid-row-gap: 50px;
   width: $containerWidht;
   margin: 0px auto;
   height: 100%;
 }
+
+#name_of_section{grid-area: name_of_section;}
+
+#sort_menu{
+  grid-area: sort_menu;
+}
+
+#blogers{grid-area: blogers;}
+
+#loading_line{grid-area: loading_line;}
 
 .name_of_section{
   width: 100%;
@@ -107,23 +195,58 @@ a{
   line-height: 61px;
 }
 
+// _______________Сортировка
 
-.blogers{
-  @include blogers(4)
+.sort_menu{
+  @include grid(1, 1fr 1.2fr 1.5fr 3fr, 1, 1fr, auto, 40px)
+  span{
+    font-size: 20px;
+  }
+}
+
+.select {
+
+}
+
+.select__head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color;
+  cursor: pointer;
+}
+
+.select__head::after {
+  width: 14px;
+  height: 7px;
+  background: $bgColor url("../media/icons/Vector (3).png") no-repeat center / cover;
+  content: '';
+  margin-left: 10px;
+}
+
+
+// _______________Блогеры
+.blogers {
+  height: 100%;
+  width: 100%;
+  @include grid(4, 1fr, 2 , 1fr, 20px, 50px)
 }
 
 .card{
   width: 100%;
   height: 100%;
   align-items: center;
-  // background: rgba(189, 28, 159, 0.5);
-
-
 }
 
 .context{
-  margin: 60% 4% 6% 4%;
-
+  margin: 61% 4% 3.5% 4%;
+  height: 100%;
+  width: 100%;
+  align-items: flex-end;
   span{
     color: $color;
     font-weight: 700;
@@ -134,21 +257,14 @@ a{
 
 .statistic{
   margin-top: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 10px;
+  @include grid(2, 1fr, 2, 1fr, auto, 10px);
   font-size: 20px;
+
   div{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  img{
-    width: 12%;
-  }
-  p{
-    margin-left: 5%;
+    @include grid(1, 1fr 2fr,1 ,.5fr ,auto, auto)
+    justify-items: start;
+    white-space: nowrap;
+    margin: 0 4%;
   }
 }
 
@@ -168,7 +284,44 @@ a{
 }
 
 .loading_line{
-  border: 1px solid $color;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  p{
+    margin: 0 5.14%;
+  }
+}
+
+.line{
+  width: 100%;
+  border: .5px solid $color;
   color: $color; /* Цвет линии для IE6-7 */
   height: 0px; /* Толщина линии */
+}
+
+
+// ___________footer_____________
+
+.footer{
+  width: $containerWidht;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.wrapper_footer{
+  @include grid(5, 1fr, 1, 1fr, auto, auto);
+  align-items: center;
+  justify-items: center;
+}
+
+.social{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: -58px;
+  img:first-child{
+    padding-right: 30px;
+  }
 }

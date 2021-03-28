@@ -1,15 +1,8 @@
-@mixin blogers($amount){
-  height: 100%;
+@mixin grid($amount-colums, $width, $amount-rows, $height, $indent-c, $indent-r){
   display: grid;
-
-  @if ($amount >= 5) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  @else{
-    grid-template-columns: repeat($amount, (100%-1.5%*($amount - 1))/$amount);
-  }
-  grid-column-gap: 1.5%;
-  grid-row-gap: 7.5%;
+  grid-template-columns: repeat($amount-colums, $width);
+  grid-template-rows: repeat($amount-rows, $height);
+  grid-column-gap: $indent-c;
+  grid-row-gap: $indent-r;
   align-items: center;
-  grid-row: 1;
 }
