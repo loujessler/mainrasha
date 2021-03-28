@@ -22,6 +22,13 @@ li {
   /* Убираем маркеры */
 }
 
+h3 {
+  color: #EFF3F5;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+}
+
 a {
   text-decoration: none;
   color: #EFF3F5;
@@ -36,7 +43,7 @@ a {
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   margin: 0px auto;
 }
 
@@ -63,7 +70,7 @@ a {
 }
 
 .main {
-  width: 90%;
+  width: 80%;
   margin: 0px auto;
   height: 100%;
 }
@@ -81,11 +88,13 @@ a {
 }
 
 .blogers {
+  height: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 50px;
+  grid-template-columns: repeat(4, 23.875%);
+  grid-column-gap: 1.5%;
+  grid-row-gap: 7.5%;
   align-items: center;
+  grid-row: 1;
 }
 
 .card {
@@ -101,15 +110,141 @@ a {
 .context span {
   color: #EFF3F5;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 30px;
   line-height: 37px;
 }
 
+.statistic {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  font-size: 20px;
+}
+
+.statistic div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.statistic img {
+  width: 12%;
+}
+
+.statistic p {
+  margin-left: 5%;
+}
+
 #card_1 {
-  background: linear-gradient(rgba(189, 28, 159, 0.25), rgba(189, 28, 159, 0.25)), url("../media/Rectangle 25.png") center/cover;
+  background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 25.png") center/cover;
 }
 
 #card_1:hover {
-  position: inherit;
   background: url("../media/Rectangle 25.png") center/cover;
+  box-shadow: 0 0 15px black;
+}
+
+#card_1:hover .context {
+  display: none;
+}
+
+#card_2 {
+  background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 26.png") center/cover;
+}
+
+#card_2:hover {
+  background: url("../media/Rectangle 26.png") center/cover;
+  box-shadow: 0 0 15px black;
+}
+
+#card_2:hover .context {
+  display: none;
+}
+
+#card_3 {
+  background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 27.png") center/cover;
+}
+
+#card_3:hover {
+  background: url("../media/Rectangle 27.png") center/cover;
+  box-shadow: 0 0 15px black;
+}
+
+#card_3:hover .context {
+  display: none;
+}
+
+#card_4 {
+  background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 28.png") center/cover;
+}
+
+#card_4:hover {
+  background: url("../media/Rectangle 28.png") center/cover;
+  box-shadow: 0 0 15px black;
+}
+
+#card_4:hover .context {
+  display: none;
+}
+
+#card_5 {
+  background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 29.png") center/cover;
+}
+
+#card_5:hover {
+  background: url("../media/Rectangle 29.png") center/cover;
+  box-shadow: 0 0 15px black;
+}
+
+#card_5:hover .context {
+  display: none;
+}
+
+#card_6 {
+  background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 30.png") center/cover;
+}
+
+#card_6:hover {
+  background: url("../media/Rectangle 30.png") center/cover;
+  box-shadow: 0 0 15px black;
+}
+
+#card_6:hover .context {
+  display: none;
+}
+
+#card_7 {
+  background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 31.png") center/cover;
+}
+
+#card_7:hover {
+  background: url("../media/Rectangle 31.png") center/cover;
+  box-shadow: 0 0 15px black;
+}
+
+#card_7:hover .context {
+  display: none;
+}
+
+#card_8 {
+  background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 32.png") center/cover;
+}
+
+#card_8:hover {
+  background: url("../media/Rectangle 32.png") center/cover;
+  box-shadow: 0 0 15px black;
+}
+
+#card_8:hover .context {
+  display: none;
+}
+
+.loading_line {
+  border: 1px solid #EFF3F5;
+  color: #EFF3F5;
+  /* Цвет линии для IE6-7 */
+  height: 0px;
+  /* Толщина линии */
 }

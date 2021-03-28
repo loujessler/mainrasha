@@ -1,6 +1,7 @@
-$bgColor: #6E105E;
-$color: #EFF3F5;
-$containerWidht: 90%;
+@import "mixin";
+@import "variables";
+
+
 
 @font-face {
   // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом)
@@ -28,6 +29,12 @@ li {
   list-style-type: none; /* Убираем маркеры */
 }
 
+h3{
+  color: $color;
+  font-weight: 700;
+  font-size: $h3Size;
+  line-height: 37px;
+}
 
 a{
   text-decoration: none;
@@ -100,13 +107,9 @@ a{
   line-height: 61px;
 }
 
+
 .blogers{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 50px;
-  // background-color: aquamarine;
-  align-items: center;
+  @include blogers(4)
 }
 
 .card{
@@ -124,20 +127,48 @@ a{
   span{
     color: $color;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 30px;
     line-height: 37px;
   }
 }
 
 .statistic{
-
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  font-size: 20px;
+  div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  img{
+    width: 12%;
+  }
+  p{
+    margin-left: 5%;
+  }
 }
 
-#card_1{
-  background: linear-gradient(rgba(189, 28, 159, 0.25), rgba(189, 28, 159, 0.25)),
-  url("../media/Rectangle 25.png") center/cover;;
+// цикл для карточек блогеров
+@for $i from 1 to 9 {
+  #card_#{$i}{
+    background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)),
+    url("../media/Rectangle #{24+$i}.png") center/cover; //наложение цвета
+    &:hover{
+      background: url("../media/Rectangle #{24+$i}.png") center/cover; //убрать наложение
+      box-shadow: 0 0 15px rgba(0,0,0,1);
+      .context{
+        display: none; //убрать текст при наведении на карточку
+      }
+    }
+  }
 }
-#card_1:hover{
-  position: inherit;
-  background: url("../media/Rectangle 25.png") center/cover;
+
+.loading_line{
+  border: 1px solid $color;
+  color: $color; /* Цвет линии для IE6-7 */
+  height: 0px; /* Толщина линии */
 }
