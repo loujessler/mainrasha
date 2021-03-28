@@ -1,2 +1,76 @@
 @import "mixin";
 @import "variables";
+
+.open_card{
+  width: $containerWidht;
+  margin: 0px auto;
+}
+
+.main_card{
+  display: grid;
+  grid-template-areas:
+  "photo name"
+  "photo subscribers"
+  "photo info";
+  grid-template-rows: 1fr 2fr 3fr;
+  grid-template-columns: 1fr 2fr ;
+  grid-column-gap: 40px;
+  margin-left: 40px;
+  justify-items: flex-start;
+
+  background: rgba(255, 255, 255, 0.25);
+  /* white */
+  border: 1px solid #EFF3F5;
+  box-sizing: border-box;
+  // backdrop-filter: blur(5px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 5px;
+  margin: 50px auto;
+}
+
+.photo{
+  grid-area: photo;
+  background:  url("../media/Rectangle 25.png") center/cover;
+  width: 100%;
+  height: 100%;
+}
+
+.subscribers{
+  @include grid(2, 1fr, 2, 1fr, 50px, 30px)
+  .subscribers_block{
+    // display: flex;
+    @include grid(1, 1fr 2fr, 1, 1fr, auto, auto)
+    justify-items: flex-start;
+    align-items: center;
+  }
+}
+
+.info{
+  @include grid(1, 1fr, 1, 1fr 2fr, normal, normal);
+  justify-items: flex-start;
+  align-items: center;
+  .heading{
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+.last_videos{
+  @include grid(1, 1fr, 1, 1fr 3fr, normal, normal);
+}
+
+.videos{
+  // @include grid(3, 421px, 2, 217px, 20px, 30px);
+  @include grid(3, 1fr, 2, 1fr, 20px, 30px);
+  width: 80vw;
+  height: 40vh;
+}
+
+@for $i from 1 to 7 {
+  .video_#{$i}{
+    width: 100%;
+    height: 100%;
+    background: url("../media/Polygon 1.png") center no-repeat,
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../media/Rectangle #{39+$i}.png") center/cover; //наложение цвета
+  }
+}

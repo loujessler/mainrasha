@@ -159,7 +159,7 @@ a {
   grid-area: loading_line;
 }
 
-.name_of_section {
+.name_of_section, .heading {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -215,7 +215,7 @@ a {
   align-items: center;
 }
 
-.card {
+#card {
   width: 100%;
   height: 100%;
   align-items: center;
@@ -258,107 +258,107 @@ a {
   margin: 0 4%;
 }
 
-#card_1 {
+.card_1 {
   background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 25.png") center/cover;
 }
 
-#card_1:hover {
+.card_1:hover {
   background: url("../media/Rectangle 25.png") center/cover;
   box-shadow: 0 0 15px black;
 }
 
-#card_1:hover .context {
+.card_1:hover .context {
   display: none;
 }
 
-#card_2 {
+.card_2 {
   background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 26.png") center/cover;
 }
 
-#card_2:hover {
+.card_2:hover {
   background: url("../media/Rectangle 26.png") center/cover;
   box-shadow: 0 0 15px black;
 }
 
-#card_2:hover .context {
+.card_2:hover .context {
   display: none;
 }
 
-#card_3 {
+.card_3 {
   background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 27.png") center/cover;
 }
 
-#card_3:hover {
+.card_3:hover {
   background: url("../media/Rectangle 27.png") center/cover;
   box-shadow: 0 0 15px black;
 }
 
-#card_3:hover .context {
+.card_3:hover .context {
   display: none;
 }
 
-#card_4 {
+.card_4 {
   background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 28.png") center/cover;
 }
 
-#card_4:hover {
+.card_4:hover {
   background: url("../media/Rectangle 28.png") center/cover;
   box-shadow: 0 0 15px black;
 }
 
-#card_4:hover .context {
+.card_4:hover .context {
   display: none;
 }
 
-#card_5 {
+.card_5 {
   background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 29.png") center/cover;
 }
 
-#card_5:hover {
+.card_5:hover {
   background: url("../media/Rectangle 29.png") center/cover;
   box-shadow: 0 0 15px black;
 }
 
-#card_5:hover .context {
+.card_5:hover .context {
   display: none;
 }
 
-#card_6 {
+.card_6 {
   background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 30.png") center/cover;
 }
 
-#card_6:hover {
+.card_6:hover {
   background: url("../media/Rectangle 30.png") center/cover;
   box-shadow: 0 0 15px black;
 }
 
-#card_6:hover .context {
+.card_6:hover .context {
   display: none;
 }
 
-#card_7 {
+.card_7 {
   background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 31.png") center/cover;
 }
 
-#card_7:hover {
+.card_7:hover {
   background: url("../media/Rectangle 31.png") center/cover;
   box-shadow: 0 0 15px black;
 }
 
-#card_7:hover .context {
+.card_7:hover .context {
   display: none;
 }
 
-#card_8 {
+.card_8 {
   background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)), url("../media/Rectangle 32.png") center/cover;
 }
 
-#card_8:hover {
+.card_8:hover {
   background: url("../media/Rectangle 32.png") center/cover;
   box-shadow: 0 0 15px black;
 }
 
-#card_8:hover .context {
+.card_8:hover .context {
   display: none;
 }
 

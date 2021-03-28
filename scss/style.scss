@@ -183,7 +183,7 @@ a{
 
 #loading_line{grid-area: loading_line;}
 
-.name_of_section{
+.name_of_section, .heading{
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -236,7 +236,7 @@ a{
   @include grid(4, 1fr, 2 , 1fr, 20px, 50px)
 }
 
-.card{
+#card{
   width: 100%;
   height: 100%;
   align-items: center;
@@ -270,7 +270,7 @@ a{
 
 // цикл для карточек блогеров
 @for $i from 1 to 9 {
-  #card_#{$i}{
+  .card_#{$i}{
     background: linear-gradient(rgba(189, 28, 159, 0.5), rgba(189, 28, 159, 0.5)),
     url("../media/Rectangle #{24+$i}.png") center/cover; //наложение цвета
     &:hover{

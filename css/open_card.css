@@ -1,0 +1,120 @@
+.open_card {
+  width: 80%;
+  margin: 0px auto;
+}
+
+.main_card {
+  display: grid;
+  grid-template-areas: "photo name" "photo subscribers" "photo info";
+  grid-template-rows: 1fr 2fr 3fr;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 40px;
+  margin-left: 40px;
+  justify-items: flex-start;
+  background: rgba(255, 255, 255, 0.25);
+  /* white */
+  border: 1px solid #EFF3F5;
+  box-sizing: border-box;
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 5px;
+  margin: 50px auto;
+}
+
+.photo {
+  grid-area: photo;
+  background: url("../media/Rectangle 25.png") center/cover;
+  width: 100%;
+  height: 100%;
+}
+
+.subscribers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 30px;
+  align-items: center;
+}
+
+.subscribers .subscribers_block {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr 2fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: auto;
+  grid-row-gap: auto;
+  align-items: center;
+  justify-items: flex-start;
+  align-items: center;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr 2fr);
+  grid-column-gap: normal;
+  grid-row-gap: normal;
+  align-items: center;
+  justify-items: flex-start;
+  align-items: center;
+}
+
+.info .heading {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.last_videos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr 3fr);
+  grid-column-gap: normal;
+  grid-row-gap: normal;
+  align-items: center;
+}
+
+.videos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+  align-items: center;
+  width: 80vw;
+  height: 40vh;
+}
+
+.video_1 {
+  width: 100%;
+  height: 100%;
+  background: url("../media/Polygon 1.png") center no-repeat, linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/Rectangle 40.png") center/cover;
+}
+
+.video_2 {
+  width: 100%;
+  height: 100%;
+  background: url("../media/Polygon 1.png") center no-repeat, linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/Rectangle 41.png") center/cover;
+}
+
+.video_3 {
+  width: 100%;
+  height: 100%;
+  background: url("../media/Polygon 1.png") center no-repeat, linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/Rectangle 42.png") center/cover;
+}
+
+.video_4 {
+  width: 100%;
+  height: 100%;
+  background: url("../media/Polygon 1.png") center no-repeat, linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/Rectangle 43.png") center/cover;
+}
+
+.video_5 {
+  width: 100%;
+  height: 100%;
+  background: url("../media/Polygon 1.png") center no-repeat, linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/Rectangle 44.png") center/cover;
+}
+
+.video_6 {
+  width: 100%;
+  height: 100%;
+  background: url("../media/Polygon 1.png") center no-repeat, linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../media/Rectangle 45.png") center/cover;
+}
